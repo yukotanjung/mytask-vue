@@ -9,7 +9,7 @@
         v-if="can('task_create')"
         class="btn btn-sm btn-primary mb-3"
         data-bs-toggle="modal"
-        data-bs-target="#addTaskModal"
+        data-bs-target="#taskModal"
       >
         <i class="fas fa-plus"></i> Add Task
       </button>
