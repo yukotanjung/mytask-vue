@@ -82,7 +82,7 @@ async function handleLogin() {
   loading.value = true
 
   try {
-    const res = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+    const res = await axios.post(process.env.VUE_APP_API_BASE_URL + 'auth/login', {
       email: email.value,
       password: password.value
     })
