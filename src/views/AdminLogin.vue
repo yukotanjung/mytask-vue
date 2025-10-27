@@ -82,6 +82,8 @@ async function handleLogin() {
   loading.value = true
 
   try {
+    await axios.get('https://mytask-laravel-production-1114.up.railway.app/sanctum/csrf-cookie');
+
     const res = await axios.post(process.env.VUE_APP_API_BASE_URL + 'auth/login', {
       email: email.value,
       password: password.value

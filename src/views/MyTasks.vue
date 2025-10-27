@@ -360,7 +360,8 @@ async function saveTask() {
     } else {
       // Create new task
       res = await api.post('/tasks', form.value, {
-        headers: { Authorization: `Bearer ${token}` }
+        headers: { Authorization: `Bearer ${token}` },
+        withCredentials: true
       })
     }
 
